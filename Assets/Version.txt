@@ -1,0 +1,24 @@
+Description:
+	Every character gets a new special move (6A).
+	Every character gets voice foley.
+	AR moves now have a dark-screen effect to improve game-feel.
+	When running and jumping you now carry the momentum.
+	Updated character portraits.
+	Small visual updates for character sprites and game-feel for moving.
+	Improved the game-feel of dash.
+	Small visual updates for game UI.
+	Add on-fire effect when hit by fire moves.
+
+Version:
+	0.2.13
+
+Patch Notes:
+	Add 6A moves.
+	Add character voices.
+	Add dark-screen effect for AR moves.
+	Add run jump speed.
+	Updated portraits.
+	Minor animation fixes.
+	Dash game-feel improvement.
+	Minor UI improvements.
+	Add on-fire effect.
