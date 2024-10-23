@@ -9,14 +9,15 @@ public class audioManager : MonoBehaviour
     public bool naDireita;
     public bool naEsquerda;
     public bool acima;
-    public AudioSource audioSource;
-    public AudioClip direitaClip;
-    public AudioClip esquerdaClip;
-    public AudioClip acimaClip;
+    public AudioSource audioSourceDireita;
+    public AudioSource audioSourceEsquerda;
+    public AudioSource audioSourceAcima;
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSourceDireita.Play();
+        audioSourceEsquerda.Play();
+        audioSourceAcima.Play();
     }
 
     // Update is called once per frame
@@ -24,33 +25,42 @@ public class audioManager : MonoBehaviour
     {
         if (player2.transform.position.x - player1.transform.position.x >= 0)
         {
-            audioSource.clip = direitaClip;
-            Debug.LogWarning("inimigo à direita");
-            audioSource.loop = true;
-            naDireita = true;
-            naEsquerda = false;
-            acima = false;
-            audioSource.Play();
+            audioSourceDireita.mute = false;
+            audioSourceEsquerda.mute = true;
+            audioSourceAcima.mute = true;
+            // Debug.LogWarning("inimigo à direita");
+            // naDireita = true;
+            // naEsquerda = false;
+            // acima = false;
+            // audioSource.Play();
         }
 
         else if (player2.transform.position.x - player1.transform.position.x <= 0){
-            audioSource.clip = esquerdaClip;
-            Debug.LogWarning("inimigo à esquerda");
-            audioSource.loop = true;
-            naDireita = false;
-            naEsquerda = true;
-            acima = false;
-            audioSource.Play();
+            audioSourceDireita.mute = true;
+            audioSourceEsquerda.mute = false;
+            audioSourceAcima.mute = true;
+            // audioSource.Stop();
+            // audioSource.clip = esquerdaClip;
+            // Debug.LogWarning("inimigo à esquerda");
+            // audioSource.loop = true;
+            // naDireita = false;
+            // naEsquerda = true;
+            // acima = false;
+            // audioSource.Play();
         }
 
         if (player2.transform.position.y > 0){
-            audioSource.clip = acimaClip;
-            Debug.LogWarning("inimigo acima");
-            audioSource.loop = true;
-            naDireita = false;
-            naEsquerda = false;
-            acima = true;
-            audioSource.Play();
+            audioSourceDireita.mute = true;
+            audioSourceEsquerda.mute = true;
+            audioSourceAcima.mute = false;
+            // audioSource.Stop();
+            // audioSource.clip = acimaClip;
+            // Debug.LogWarning("inimigo acima");
+            // audioSource.loop = true;
+            // naDireita = false;
+            // naEsquerda = false;
+            // acima = true;
+            // audioSource.Play();
         }
     }
 }
