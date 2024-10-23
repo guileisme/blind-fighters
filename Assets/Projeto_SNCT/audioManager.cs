@@ -43,7 +43,7 @@ public class audioManager : MonoBehaviour
             audioSource.Play();
         }
 
-        else if (player2.transform.position.y > 0){
+        if (player2.transform.position.y > 0){
             audioSource.clip = acimaClip;
             Debug.LogWarning("inimigo acima");
             audioSource.loop = true;
