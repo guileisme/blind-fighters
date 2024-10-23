@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
+    public Player player1;
+    public Player player2;
+    
     [Header("Player Settings")]
     [SerializeField] private CharacterTypeEnum _characterOne = default;
     [SerializeField] private CharacterTypeEnum _characterTwo = default;
@@ -51,4 +54,5 @@ public class GameplayManager : MonoBehaviour
     {
         float normalizedDistance = GetNormalizedDistance();
         audioSource.volume = Mathf.Lerp(1f, 0f, normalizedDistance); 
+    }
 }

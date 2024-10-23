@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: aa5e5aaa31b42984189342066cdd871b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player1: {instanceID: 0}
+  - player2: {instanceID: 0}
+  - direitaSource: {instanceID: 0}
+  - direitaClip: {fileID: 8300000, guid: c4d1300737f4d1242abc3285d5dfb2a2, type: 3}
+  - esquerdaSource: {instanceID: 0}
+  - esquerdaClip: {fileID: 8300000, guid: ea24ea26f9d789749a937acadb40a14b, type: 3}
+  - acimaSource: {instanceID: 0}
+  - acimaClip: {fileID: 8300000, guid: 401d8bbee86ccf643b3b2a9a268f7630, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
