@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.DualShock;
 
 public class audioManager : MonoBehaviour
 {
@@ -28,6 +30,7 @@ public class audioManager : MonoBehaviour
             audioSourceDireita.mute = false;
             audioSourceEsquerda.mute = true;
             audioSourceAcima.mute = true;
+            Gamepad.current.SetMotorSpeeds(0f, 5f);
             // Debug.LogWarning("inimigo à direita");
             // naDireita = true;
             // naEsquerda = false;
@@ -39,6 +42,7 @@ public class audioManager : MonoBehaviour
             audioSourceDireita.mute = true;
             audioSourceEsquerda.mute = false;
             audioSourceAcima.mute = true;
+            Gamepad.current.SetMotorSpeeds(5f, 0f);
             // audioSource.Stop();
             // audioSource.clip = esquerdaClip;
             // Debug.LogWarning("inimigo à esquerda");
